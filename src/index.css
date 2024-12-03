@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #fdcb6e, #2196F3); 
+}
+.form_container {
+  background: rgba(255, 255, 255, 0.9); 
+  width: 80%; 
+  max-width: 1200px; 
+  min-width: 500px;
+  height: 100%;
+  border-radius: 15px; 
+  padding: 30px;
+  box-sizing: border-box; 
+}
+.form_container h1{
+  padding-bottom: 20px;
+}
+.input_container {
+  margin-bottom: 20px;
+}
+
+.input_container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.input_container input[type="text"],
+.input_container input[type="date"],
+.input_container textarea,
+.input_container select {
+  width: 100%; 
+  padding: 12px;
+  background: rgba(253, 203, 110, 0.2); 
+  border-radius: 6px;
+  font-size: 1rem;
+  border: none;
+}
+
+.input_container textarea {
+  resize: vertical; 
+}
+
+.radio_btn,
+.checkbox_btn {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+button {
+  background: #fdcb6e;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: #2196F3;
+}
+.radio_btn label,
+.checkbox_btn label {
+  margin: 0;
+  font-size: 1rem;
+}
+.form_container .input_container input[type='text'],.form_container .input_container input[type='date'],.form_container .input_container textarea{width: 100%;};
+
+
+.switch_container {
+  display: flex;
+  justify-content: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fdcb6e;
+  border-radius: 34px;
+  transition: background-color 0.4s ease;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+input:checked + .slider {
+  background: #2196F3;;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+table {
+  margin: 20px 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #fdcb6e3a;
+}
+
+@media (max-width: 768px) {
+  .form_container {
+    width: 100%; 
+    max-width: auto; 
+    min-width: auto;
+    padding: 20px;
+  }
+}
